@@ -1,7 +1,7 @@
 ---
 title: "A Descent Into Madness with Vim, Tmux, & Italics"
 date: 2016-10-18T22:00:00-00:00
-draft: true
+draft: false
 ---
 
 It all started out innocently enough. [Eric Elliott](https://twitter.com/_ericelliott) retweeted this [tweet](https://twitter.com/mxstbr/status/778245230709571585) by [Max Stoiber](https://twitter.com/mxstbr).  The tweet was meant to impart some great React knowledge upon me, however I couldn't help, but be completely distracted by screen.  What was that typeface?  It's absolutely beautiful.  And his comments are rendered in italics, but this monospaced italics is different, it has... cursive characters?!  I must have this!

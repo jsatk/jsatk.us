@@ -10,6 +10,8 @@ externalLink = ""
 series = []
 +++
 
+**Originally published on the Earnest engineering blog [here](https://medium.com/earnest-engineering/three-tiny-lessons-from-functional-programming-d546092eb5d1).**
+
 In the past two years or so the term "Functional Programming" (FP for short) has cropped up everywhere. You can't get away from it. Especially in javascript. It feels like every JS developer but me was invited to a cool FP party and all of a sudden traditional object-oriented programming (OO for short) was for dinosaurs.
 
 Also in the past two years, more thinkpieces than I care to link to have been written stating why or why not FP is a good thing for the javascript community.
