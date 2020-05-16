@@ -8,8 +8,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #323232;
-  background-color: #FAFAFA;
+  color: #373737;
+  background-color: #F4F4F4;
   font-family: Merriweather, Georgia, serif;
   font-size: 1.6em;
   font-weight: 300;
@@ -20,10 +20,37 @@ body {
       line-height: 1.6em; } }
 a {
   font-weight: 300;
-  color: #e31b23;
+  color: #C0B283;
   text-decoration: none; }
   a:focus, a:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
+
+p a {
+  color: #C0B283;
+  position: relative;
+  transition: all 0.2s ease-in-out; }
+  p a:before, p a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background-color: #C0B283; }
+  p a:before {
+    left: 50%; }
+  p a:after {
+    right: 50%; }
+  p a:hover {
+    color: #373737;
+    cursor: pointer;
+    text-decoration: none; }
+    p a:hover:before, p a:hover:after {
+      width: 50%;
+      opacity: 1; }
+  p a:focus {
+    color: #C0B283; }
 
 p {
   margin: 2.0rem 0 2.0rem 0; }
@@ -108,11 +135,11 @@ code {
   font-family: "Source Code Pro", "Lucida Console", monospace;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: #E0E0E0;
-  color: #323232; }
+  background-color: #DCD0C0;
+  color: #373737; }
 
 blockquote {
-  border-left: 2px solid #E0E0E0;
+  border-left: 2px solid #DCD0C0;
   padding-left: 2.0rem;
   line-height: 2.2rem;
   font-weight: 400;
@@ -250,11 +277,11 @@ figure {
           text-align: left; } }
     .list ul li .title {
       font-size: 1.8rem;
-      color: #323232;
+      color: #373737;
       font-family: Lato, Helvetica, sans-serif;
       font-weight: 700; }
       .list ul li .title:hover, .list ul li .title:focus {
-        color: #e31b23; }
+        color: #C0B283; }
 
 .centered {
   display: flex;
@@ -280,13 +307,13 @@ figure {
         display: inline-block;
         position: relative; }
         .centered .about ul li a {
-          color: #323232;
+          color: #373737;
           text-transform: uppercase;
           margin-left: 1.0rem;
           margin-right: 1.0rem;
           font-size: 1.6rem; }
           .centered .about ul li a:hover, .centered .about ul li a:focus {
-            color: #e31b23; }
+            color: #C0B283; }
           @media only screen and (max-width: 768px) {
             .centered .about ul li a {
               font-size: 1.4rem; } }
@@ -308,6 +335,23 @@ figure {
       @media only screen and (max-width: 768px) {
         .centered .error h2 {
           font-size: 2.8rem; } }
+.article-img-right,
+.article-img-left {
+  border: 4px solid #C0B283; }
+  @media all and (min-width: 768px) {
+    .article-img-right,
+    .article-img-left {
+      max-width: 33%; } }
+@media all and (min-width: 768px) {
+  .article-img-left {
+    float: left;
+    margin: 1rem 1rem 1rem 0; } }
+
+@media all and (min-width: 768px) {
+  .article-img-right {
+    float: right;
+    margin: 1rem 0 1rem 1rem; } }
+
 .navigation {
   height: 6.0rem;
   width: 100%; }
@@ -317,7 +361,7 @@ figure {
     font-family: Lato, Helvetica, sans-serif;
     font-weight: 700;
     line-height: 6.0rem;
-    color: #323232; }
+    color: #373737; }
   .navigation a {
     position: relative;
     transition: all 0.2s ease-in-out; }
@@ -330,7 +374,7 @@ figure {
       margin: 5px 0 0;
       transition: all 0.2s ease-in-out;
       opacity: 0;
-      background-color: #e31b23; }
+      background-color: #C0B283; }
     .navigation a:before {
       left: 50%; }
     .navigation a:after {
@@ -342,7 +386,7 @@ figure {
         width: 50%;
         opacity: 1; }
     .navigation a:focus {
-      color: #e31b23; }
+      color: #C0B283; }
   .navigation .navigation-title {
     letter-spacing: 0.1rem;
     text-transform: uppercase; }
@@ -362,9 +406,9 @@ figure {
         padding: 0;
         max-height: 0;
         width: 100%;
-        background-color: #FAFAFA;
-        border-top: solid 2px #E0E0E0;
-        border-bottom: solid 2px #E0E0E0;
+        background-color: #F4F4F4;
+        border-top: solid 2px #DCD0C0;
+        border-bottom: solid 2px #DCD0C0;
         transition: opacity 0.25s, max-height 0.15s linear; } }
     .navigation .navigation-list .navigation-item {
       float: left;
@@ -381,7 +425,7 @@ figure {
         margin-right: 1.0rem; }
     @media only screen and (max-width: 768px) {
       .navigation .navigation-list .menu-separator {
-        border-top: 2px solid #323232;
+        border-top: 2px solid #373737;
         margin: 0 8.0rem; }
         .navigation .navigation-list .menu-separator span {
           display: none; } }
@@ -389,7 +433,7 @@ figure {
     display: none; }
     @media only screen and (max-width: 768px) {
       .navigation #menu-toggle:checked + label {
-        color: #E0E0E0; }
+        color: #DCD0C0; }
       .navigation #menu-toggle:checked + label + ul {
         visibility: visible;
         opacity: 1;
@@ -402,10 +446,10 @@ figure {
         font-size: 2.4rem;
         font-weight: 400;
         line-height: 6.0rem;
-        color: #323232;
+        color: #373737;
         cursor: pointer; }
         .navigation .menu-button:hover, .navigation .menu-button:focus {
-          color: #e31b23; } }
+          color: #C0B283; } }
 .pagination {
   margin-top: 6.0rem;
   text-align: center;
@@ -431,6 +475,6 @@ figure {
   line-height: 2.0rem;
   margin-bottom: 1.0rem; }
   .footer a {
-    color: #e31b23; }
+    color: #C0B283; }
 
 /*# sourceMappingURL=coder.css.map */

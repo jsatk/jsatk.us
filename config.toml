@@ -53,6 +53,13 @@ pygmentscodefencesguesssyntax = true
     icon = "fab fa-linkedin"
     weight = 4
     url = "https://www.linkedin.com/in/jessesethatkinson/"
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 6
+    url = "/blog/index.xml"
+    rel = "alternate"
+    type = "application/rss+xml"
 
 # Menu links
 [[menu.main]]
@@ -63,3 +70,11 @@ pygmentscodefencesguesssyntax = true
     name = "About"
     weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "Résumé"
+    weight = 3
+    url = "/jesse-atkinson-resume.pdf"
+
+# https://discourse.gohugo.io/t/raw-html-getting-omitted-in-0-60-0/22032/2
+[markup.goldmark.renderer]
+    unsafe= true

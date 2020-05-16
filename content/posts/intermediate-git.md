@@ -1,9 +1,8 @@
 ---
 title: "Intermediate Git"
-date: 2020-01-20T20:53:41-08:00
-draft: true
+date: 2020-01-20T00:00:00-00:00
+draft: false
 ---
-> Originally published October 13, 2015 on Medium.
 
 ## What this post is
 
