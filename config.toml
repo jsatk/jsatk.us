@@ -55,11 +55,16 @@ pygmentscodefencesguesssyntax = true
     url = "https://www.linkedin.com/in/jessesethatkinson/"
 [[params.social]]
     name = "RSS"
-    icon = "fas fa-rss"
-    weight = 6
+    icon = "fas fa-rss fa-2x"
+    weight = 5
     url = "/blog/index.xml"
     rel = "alternate"
     type = "application/rss+xml"
+[[params.social]]
+    name = ".plan"
+    icon = "fas fa-file-signature fa-2x"
+    weight = 6
+    url = "https://github.com/jsatk/.plan"
 
 # Menu links
 [[menu.main]]
