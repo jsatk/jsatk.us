@@ -72,6 +72,6 @@ With that said, I think it's very important to keep context in mind.  My pal and
 
 [MPJ](https://twitter.com/mpjme) has a wonderful [video](https://youtu.be/dIjKJjzRX_E) about meta-work and false productivity and it is well worth your time.  Again, make sure that what you are focusing on is indeed the correct thing to focus on.  For me this was a perfectly appropriate thing to focus on on a Sunday afternoon.  And it brings me joy every time I open a file and see the comments in lovely cursive monospaced font.
 
-After all that this is what it looks like: ![screenshot](https://d1zjcuqflbd5k.cloudfront.net/files/acc_222213/v7Zo?response-content-disposition=inline;%20filename=Screen%20Shot%202016-10-02%20at%208.51.12%20PM.png&Expires=1475467005&Signature=ZCVDFogbdsfhgETu8tu9MiYkNSWO1~gkXhOpRljWKb7fL49IrGsSJcYm9N~hYPZNbh3qPJkb263Y~dsbLOtsvHFt6yexuP9MMUXlRs3yjVfsQaJUuLSC7Y~rpv85ogRtlFb8H5LBsqK-8isjpoxBpey0QgC6pXJVzgcsV-pEVSQ_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+After all that this is what it looks like: <img alt="Screenshot of how the end result" src="/images/vim-tmux-italics.png" class="article-img-right">
 
 I'm gonna go lie down now.

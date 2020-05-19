@@ -22,11 +22,37 @@ All this change and usage of new words like "monad" and "functor" can seem very 
 
 Whenever possible avoid mutating an object. Notice I didn't say "never" (and I'm sure there are some FP purists shaking their fists at me). Objects in javascript are passed by reference–meaning that if you pass around an object and various methods mutate that object it can have drastic and unwanted side-effects. I've created a trivial example of what I often see below:
 
-<script src="https://gist.github.com/jsatk/73312b6ee6db9a05976637e9c84a348a.js"></script>
+```js
+const transform = response => {
+  if (response.verify) {
+    response.verificationRequired = true;
+  }
+
+  response.amount = response.amount * 100; // I see this often for cents to dollars converion between APIs
+  return response;
+};
+```
 
 In the above we do some trivial checks and conversions. The reasons why aren't important. What is important is that, in this context, we have no idea where that response object came from or who's using it. Assuming it came from somewhere else in our codebase we can do the research and make sure it's okay we modify this object. But a much safer way that causes less burden on any future developers that look at this code is to use `Object.assign` (or if you're on a newer version of node or only support newer browsers you can use the `…` operator).
 
-<script src="https://gist.github.com/jsatk/23823b09a947137b2ef027c4a12b51f9.js"></script>
+```js
+const transform = response => {
+  return Object.assign({}, response, {
+    verificationRequired: Boolean(response.verify),
+    amount: response.amount * 100
+  });
+};
+
+const transform = response => {
+  return {
+    ...response,
+    verificationRequired: Boolean(response.verify),
+    // Since this comes *after* the original response the `amount` here will
+    // overwrite the original `response.amount`.
+    amount: response.amount * 100
+  });
+};
+```
 
 In the latter example we return an entirely new object without modifying the original object. This is paramount for ensuring our code has as little footprint as possible, doesn't cause side-effects, and is easier to understand for developers new to the codebase.
 
@@ -35,11 +61,45 @@ In the latter example we return an entirely new object without modifying the ori
 Often a class is overkill. Particularly if it's for a one-time use situation. Yet, when it's what you know it can be hard to wrap your head around not using it. One of the biggest and most common "gotcha"s with using classes is the `this` keyword. The problems with `this` are many and have been written about [elsewhere](https://www.i-programmer.info/programmer-puzzles/137-javascript/1922-the-this-problem.html) so I won't elaborate on them here. But they are real and they are many.
 Lets take a look at the MDN example for classes.
 
-<script src="https://gist.github.com/jsatk/ec654f73e7af88f0818d7ee5217facbc.js"></script>
+```js
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+
+  get area() {
+    return this.height * this.width;
+  }
+}
+
+// Pre-ES6
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+}
+
+Rectangle.prototype.getArea = function () {
+  return this.height * this.width;
+}
+```
 
 This can be easily re-written as a simple function that returns an object.
 
-<script src="https://gist.github.com/jsatk/36a783450a412230861605ef5c2691b6.js"></script>
+```js
+const rectangle = (height, width) => ({
+  height,
+  width,
+  get area() {
+    return height * width;
+  }
+});
+
+const myRectangle = rectangle(10, 20);
+myRectangle.area // => 200
+myRectangle.height // => 10
+myRectangle.width // => 20
+```
 
 The result of both examples is the same, but the wrapper pattern used in the latter example requires fewer lines, doesn't require usage of (or understanding of) `this`, and lastly doesn't require the `new` keyword to invoke. Overall there are fewer concepts to keep track of and understand.
 
@@ -56,19 +116,76 @@ I've found this to be particularly useful in my test suite. It ensures I'm not m
 
 For example:
 
-<script src="https://gist.github.com/jsatk/c20df47a1b876622a4ab2af18c412192.js"></script>
+```js
+const options = {
+  async: true,
+  page: 4
+};
+
+const awesomeFunction = options => {
+  if (!options.offset) {
+    options.offset = 10;
+  }
+
+  // do stuff with options
+};
+
+awesomeFunction(options);
+someOtherFunction(options);
+yetAnotherFunction(options);
+```
 
 The above code modifies `options` once it's passed into `awesomeMethod`. Let's say `options` is used for multiple methods all invoked at about the same time, depending on order of execution this can produce unwanted results since we are modifying the options object at the beginning of `awesomeMethod`. If that object were frozen we'd have gotten a javascript error (in strict mode, you're using strict mode right?!) letting us know we were attempting to modify a frozen object, which is super useful feedback for not only the original author but any new developers coming into the code.
 
 Lets see what that would look like with `Object.freeze`.
 
-<script src="https://gist.github.com/jsatk/bd6730a9559268db7f6db410c8a24db8.js"></script>
+```js
+const options = Object.freeze({
+  async: true,
+  page: 4
+});
+
+const awesomeFunction = options => {
+  const updatedOptions = Object.assign({}, options, {
+    offset: options.offset || 10
+  });
+
+  // do stuff with updatedOptions
+};
+
+awesomeFunction(options);
+someOtherFunction(options);
+yetAnotherFunction(options);
+```
 
 Here we're combining things we learned in the first point with things we're learning here. `Object.freeze` causes JS to throw an error if we attempt to modify the object, so we then use `Object.assign` (or `...`) to create a new options object that's local to the method thus preventing any timing issues. Concepts like this can be very useful even in OO programing.
 
 Finally, lets combine all three of the above concepts. The example here is trivial, but it gives you an idea of the simplicity and power of working without classes (when appropriate) and not mutating objects.
 
-<script src="https://gist.github.com/jsatk/670438bc762f7960e3b3568e6f32c582.js"></script>
+```js
+const config = Object.freeze({
+  async: true,
+  page: 4
+});
+
+const getThing = config => {
+  const awesomeFunction = options => {
+    const updatedOptions = Object.assign({}, options, {
+      offset: options.offset || 10
+    });
+
+    // do stuff with updatedOptions
+  };
+
+  return Object.freeze({
+    ...config,
+    awesomeFunction,
+    amount: config.amount * 100
+  });
+};
+
+const thing = getThing(config);
+```
 
 Combining the deceptively simple concepts from the three points listed above can radically change how confident you are in your code. If you combine `Object.freeze` with a function that returns an object (rather than a class) and `Object.assign` you can ensure that you have a configured object that is immutable and that nothing along the way mutated it due to a side-effect.
 

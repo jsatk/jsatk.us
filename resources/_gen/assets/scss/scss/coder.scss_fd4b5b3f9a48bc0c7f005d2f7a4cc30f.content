@@ -259,7 +259,7 @@ figure {
     @media all and (min-width: 768px) {
       .content .article-img-right,
       .content .article-img-left {
-        max-width: 33%; } }
+        max-width: 50%; } }
   @media all and (min-width: 768px) {
     .content .article-img-left {
       float: left;

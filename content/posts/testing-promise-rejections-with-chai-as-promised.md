@@ -19,7 +19,37 @@ I knew about the lovely [chai-as-promised](https://github.com/domenic/chai-as-pr
 
 So I write a test and watch it fail (like the good TDD developer I am). Here's a simplified psuedo example of what I was working on below.
 
-<script src="https://gist.github.com/jsatk/0226cbd8219a00816223df2d5c635159.js"></script>
+```js
+import thirdPartyClient from 'some-third-party-client'
+import myApi from '../../src/my-api'
+
+describe('myApi', () => {
+  describe('Error handling', () => {
+    const myRejection = {
+      errorCode: 404,
+      errorMessage: 'You broke everything',
+      errorUrl: 'http://coolapp.api.docs/error/404/'
+    }
+
+    beforeEach(() => {
+      sinon.stub(thirdPartyClient.prototype, 'dingus')
+         .returns(Promise.reject(myRejection)
+    })
+
+    afterEach(() => thirdPartyClient.prototype.dingus.restore())
+
+    it('should be rejected with the correct error object', () => {
+      const expected = myRejection
+
+      return myApi.someMethod()
+        .then(() => {
+          const actual = thirdPartyClient.prototype.dingus
+          return expect(actual).to.be.rejectedWith(expected)
+        })
+    })
+  })
+})
+```
 
 I watch it fail.
 
@@ -34,7 +64,6 @@ Something didn't feel right. So I decided I wanted to see this test fail again. 
 I realized I wasn't doing a deep comparison on the rejection. It was simply testing to see if it was indeed an object and passing if it was.
 So how do I test if a promise is rejected and also deeply test the rejection?
 
-
 ---
 
 My coworker [Pete Hodgson](https://medium.com/u/d41b471adec6?source=post_page-----c65c7c33f329----------------------) mentioned that the latest version of chai-as-promised supports some very declarative syntax and gave me this example: `expect(foo).to.be.rejected.and.eventually.have.property('quxx')`. I was overjoyed.
@@ -43,7 +72,38 @@ Now I had a way to both test if something was rejected but also what the rejecti
 
 I updated the above code to now read:
 
-<script src="https://gist.github.com/jsatk/c33e7e16435aa4ab647e1a3f53b4e08a.js"></script>
+```js
+import thirdPartyClient from 'some-third-party-client'
+import myApi from '../../src/my-api'
+
+describe('myApi', () => {
+  describe('Error handling', () => {
+    const myRejection = {
+      errorCode: 404,
+      errorMessage: 'You broke everything',
+      errorUrl: 'http://coolapp.api.docs/error/404/'
+    }
+
+    beforeEach(() => {
+      sinon.stub(thirdPartyClient.prototype, 'dingus')
+         .returns(Promise.reject(myRejection)
+    })
+
+    afterEach(() => thirdPartyClient.prototype.dingus.restore())
+
+    it('should be rejected with the correct error object', () => {
+      const expected = myRejection
+
+      return myApi.someMethod()
+        .then(() => {
+          const actual = thirdPartyClient.prototype.dingus
+          return expect(actual).to.be.rejected
+            .and.to.eventually.deep.equal(expected)
+        })
+    })
+  })
+})
+```
 
 This is not only much easier to read but allows for a deep equals comparison on the rejection.
 

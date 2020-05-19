@@ -74,77 +74,55 @@ INSTRUCTIONS
 
 ### STEP ONE
 
-![Step One](http://wp.stumptowncoffee.com/assets/aeropress_02.jpg "Step One")
-
 Grind Coffee
 It is important that the coffee be ground to a medium particulate size using a quality burr (rather than blade) grinder. By grinding the coffee this way, you are allowing for a more even extraction resulting in a fuller bodied and more nuanced cup. Blade grinders chop the coffee rather than grinding it, resulting in uneven and unpredictable particle size. This results in uneven extraction, leading to a brew with increased bitterness that is less true to the flavor profile of the coffee. In addition, the lack of uniformity in particle size results in inconsistent results from cup to cup.
 
 ### STEP TWO
-
-![Step Two](http://wp.stumptowncoffee.com/assets/aeropress_03.jpg "Step Two")
 
 Assemble the Brewer
 Place the plunger inside the brewing tube with the black rubber part touching the bottom of the number 4 circle. (The numbers should be upside down, bottom meaning closer to the table)
 
 ### STEP THREE
 
-![Step Three](http://wp.stumptowncoffee.com/assets/aeropress_04.jpg "Step Three")
-
 Rinse the Filter and Preheat the Brewer
 Place the AeroPress filter inside the black filter cap and run hot water through the filter to rinse out any residual paper flavor. Fill the brewer with hot water to preheat it and carefully pour it out.
 
 ### STEP FOUR
-
-![Step Four](http://wp.stumptowncoffee.com/assets/aeropress_06.jpg "Step Four")
 
 Add coffee
 We recommend 17 grams or one rounded AeroPress scoop of fresh ground coffee per brew.
 
 ### STEP FIVE
 
-![Step Five](http://wp.stumptowncoffee.com/assets/aeropress_05.jpg "Step Five")
-
 Initial Pour
 You should bring the water just to a boil (electric kettles are great at this) and then let it cool for about 45 seconds. Starting your timer (set to one minute), pour just enough water into the brewer to saturate the grounds and bring the level up to about the top of the 3 circle. This should be about 50ml or 1/4 cup.
 
 ### STEP SIX
-
-![Step Six](http://wp.stumptowncoffee.com/assets/aeropress_07.jpg "Step Six")
 
 Stir
 Use the paddle to quickly stir the grounds into the water making sure there are no dry spots.
 
 ### STEP SEVEN
 
-![Step Seven](http://wp.stumptowncoffee.com/assets/aeropress_08.jpg "Step Seven")
-
 Final Pour
 As soon as you are done stirring, pour enough water to bring the total level to just above the 2 circle. This should be another 50ml or 1/4 cup bringing your total water volume to 100ml or about 1/2 cup.
 
 ### STEP EIGHT
-
-![Step Eight](http://wp.stumptowncoffee.com/assets/aeropress_10.jpg "Step Eight")
 
 Attach the Filter
 Place the rinsed filter assembly on top of the brewer and screw it tight.
 
 ### STEP NINE
 
-![Step Nine](http://wp.stumptowncoffee.com/assets/aeropress_11.jpg "Step Nine")
-
 Spin the Brewer
 When the timer goes off, carefully tip the brewer to a 45° angle and gently spin it for 10 seconds in order to softly stir the coffee.
 
 ### STEP TEN
 
-![Step Ten](http://wp.stumptowncoffee.com/assets/aeropress_09.jpg "Step Ten")
-
 Plunge the Coffee
 Quickly and carefully flip the brewer onto the top of your mug and begin the plunge. Use steady gentle pressure, allowing 15 to 25 seconds to finish, and stop as soon as you hear the first hiss of air escaping.
 
 ### STEP ELEVEN
-
-![Step Eleven](http://wp.stumptowncoffee.com/assets/aeropress_12.jpg "Step Eleven")
 
 Dilute and Enjoy
 Carefully flip the brewer upright and dilute the brew to taste with hot water (we recommend starting with 50/50).
