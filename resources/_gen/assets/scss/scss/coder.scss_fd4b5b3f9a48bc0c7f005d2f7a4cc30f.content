@@ -25,11 +25,11 @@ a {
   a:focus, a:hover {
     text-decoration: none; }
 
-p a {
+a {
   color: #C0B283;
   position: relative;
   transition: all 0.2s ease-in-out; }
-  p a:before, p a:after {
+  a:before, a:after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -38,18 +38,18 @@ p a {
     transition: all 0.2s ease-in-out;
     opacity: 0;
     background-color: #C0B283; }
-  p a:before {
+  a:before {
     left: 50%; }
-  p a:after {
+  a:after {
     right: 50%; }
-  p a:hover {
+  a:hover {
     color: #373737;
     cursor: pointer;
     text-decoration: none; }
-    p a:hover:before, p a:hover:after {
+    a:hover:before, a:hover:after {
       width: 50%;
       opacity: 1; }
-  p a:focus {
+  a:focus {
     color: #C0B283; }
 
 p {
@@ -255,8 +255,7 @@ figure {
     margin: 0; }
   .content .article-img-right,
   .content .article-img-left {
-    margin-bottom: 1rem;
-    max-width: 50%; }
+    margin-bottom: 1rem; }
     @media all and (min-width: 768px) {
       .content .article-img-right,
       .content .article-img-left {

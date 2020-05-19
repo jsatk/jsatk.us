@@ -64,7 +64,7 @@ pygmentscodefencesguesssyntax = true
     name = ".plan"
     icon = "fas fa-file-signature fa-2x"
     weight = 6
-    url = "https://github.com/jsatk/.plan"
+    url = "/dotplan/"
 
 # Menu links
 [[menu.main]]
@@ -75,7 +75,10 @@ pygmentscodefencesguesssyntax = true
     name = "About"
     weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "Et Cetera"
+    weight = 3
+    url = "/et-cetera/"
 
-# https://discourse.gohugo.io/t/raw-html-getting-omitted-in-0-60-0/22032/2
 [markup.goldmark.renderer]
-    unsafe= true
+    unsafe = true
