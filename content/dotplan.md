@@ -18,6 +18,8 @@ draft: false
     * [2020-03-29](#2020-03-29)
 * [May 2020](#may-2020)
     * [2020-05-04](#2020-05-04)
+* [June 2020](#june-2020)
+    * [2020-06-08](#2020-06-08)
 
 ## January 2020
 
@@ -66,3 +68,11 @@ I never thought I'd be reading books & articles on Agile but here we are.
 Finally spent some time working on my website.  Settled on the Coder theme just to force myself to keep moving and not freeze on a decision.
 
 Stealing the colorscheme from [Martin Agency](https://martinagency.com/about).
+
+## June 2020
+
+## 2020-06-08
+
+Starting reading [Hands-on Scala Programming](https://www.handsonscala.com/) by Li Haoyi.
+
+Dinked a little more on website.  Almost done and ready to launch.

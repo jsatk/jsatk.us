@@ -10,6 +10,7 @@ This page serves as a reference page of sorts.  A combination of answers to FAQs
     - [Software](#software)
     - [Hardware](#hardware)
 - [Reference Library](#reference-library)
+    - [Blogs](#blogs)
 
 ## Tools
 
@@ -33,10 +34,14 @@ This page serves as a reference page of sorts.  A combination of answers to FAQs
 
 ## Reference Library
 
-### Favorite Software Engineering Blogs
+### Blogs
 
 This is a list of technical-leaning blogs that have had a large influence on me.
 
-[Brett Terpstra](https://brettterpstra.com/)
-[Steve Losh](https://stevelosh.com/)
-[Richard P. Gabriel's blog, Dreamsongs](https://www.dreamsongs.com/index.html)
+- [Brett Terpstra](https://brettterpstra.com/)
+- [Steve Losh](https://stevelosh.com/)
+- [Richard P. Gabriel's Dreamsongs](https://www.dreamsongs.com/index.html)
+- [Tim Pope's tbaggery](https://tbaggery.com/)
+- [Pete Hodgson](https://blog.thepete.net/blog/)
+- [tpolecat](https://tpolecat.github.io/)
+- [Chris Kipp](https://chris-kipp.io/blog)
