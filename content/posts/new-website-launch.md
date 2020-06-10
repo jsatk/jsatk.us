@@ -1,7 +1,7 @@
 +++
 draft = false
 date = 2020-06-09T23:22:35-07:00
-title = "Whelp.  Lets try this again..."
+title = "Whelp.  Let's try this again..."
 description = ""
 slug = ""
 tags = []
