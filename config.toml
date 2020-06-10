@@ -57,7 +57,7 @@ pygmentscodefencesguesssyntax = true
     name = "RSS"
     icon = "fas fa-rss fa-2x"
     weight = 5
-    url = "/blog/index.xml"
+    url = "/posts/index.xml"
     rel = "alternate"
     type = "application/rss+xml"
 [[params.social]]
