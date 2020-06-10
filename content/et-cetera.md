@@ -40,6 +40,7 @@ This is a list of technical-leaning blogs that have had a large influence on me.
 
 - [Brett Terpstra](https://brettterpstra.com/)
 - [Steve Losh](https://stevelosh.com/)
+- [Rands in Repose](https://randsinrepose.com/)
 - [Richard P. Gabriel's Dreamsongs](https://www.dreamsongs.com/index.html)
 - [Tim Pope's tbaggery](https://tbaggery.com/)
 - [Pete Hodgson](https://blog.thepete.net/blog/)
