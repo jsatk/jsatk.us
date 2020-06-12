@@ -72,7 +72,7 @@ Stealing the colorscheme from [Martin Agency](https://martinagency.com/about).
 
 ## June 2020
 
-## 2020-06-08
+### 2020-06-08
 
 Starting reading [Hands-on Scala Programming](https://www.handsonscala.com/) by Li Haoyi.
 
