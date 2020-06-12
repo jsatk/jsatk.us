@@ -23,3 +23,15 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
+
+# Go back to root
+cd ..
+
+# Add submodule changes to git
+git add public
+
+# Commit message for updating the submodule SHA for `public`.
+git commit -m "New site deploy"
+
+# Push source.
+git push origin master
