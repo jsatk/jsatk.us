@@ -4,3 +4,7 @@
 [submodule "themes/hugo-coder"]
 	path = themes/hugo-coder
 	url = https://github.com/jsatk/hugo-coder.git
+[submodule "public"]
+	path = public
+	url = https://github.com/jsatk/jsatk.github.io.git
+	branch = master
