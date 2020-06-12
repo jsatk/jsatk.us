@@ -80,6 +80,6 @@ Dinked a little more on website.  Almost done and ready to launch.
 
 ### 2020-06-12
 
-Late Wednesday, after announcing my new site ([https://jsatk.us](https://jsatk.us)) I `git clone`-ed the repo for it to my work machine to fix a typo. The theme is kept in a git submodule. I don't use `master` branch for my theme. Turns out, after fixing my typo and deploying and only double checking that the typo was published, I had deployed the site with the `master` branch stylings, not the ones I spent 15+ hours on. So the styling on my brand new website got b0rked, by me, 7 or so hours after launching and has been b0rked for something like 48 hours.
+Late Wednesday, after announcing my new site ([https://jsatk.us](https://jsatk.us)), I `git clone`-ed the repo for it to my work machine to fix a typo. The theme is kept in a git submodule. I don't use `master` branch for my theme. Turns out, after fixing my typo and deploying and only double checking that the typo was published, I had deployed the site with the `master` branch stylings, not the ones I spent 15+ hours on. So the styling on my brand new website got b0rked, by me, 7 or so hours after launching and has been b0rked for something like 48 hours.
 
 git submodules are hell. Never use them.
