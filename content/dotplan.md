@@ -91,6 +91,8 @@ git submodules are hell. Never use them.
 
 ### 09-06-2020
 
+Started going through the Vlime tutor again.  I want to get back to learning Common Lisp and finish reading _Common Lisp: A gGentle Introduction to Symbolic Computation_.
+
 I need to move my sbcl installation from brew to asdf.  I need to install quicklist as part of my Makefile.
 
 ## 09-07-2020
