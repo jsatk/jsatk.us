@@ -93,7 +93,7 @@ git submodules are hell. Never use them.
 
 Started going through the Vlime tutor again.  I want to get back to learning Common Lisp and finish reading _Common Lisp: A gGentle Introduction to Symbolic Computation_.
 
-I need to move my sbcl installation from brew to asdf.  I need to install quicklist as part of my Makefile.
+I need to move my sbcl installation from brew to asdf.  I need to install Quicklisp as part of my Makefile.
 
 ### 09-07-2020
 
@@ -103,3 +103,7 @@ Need to take care of this error in Vlime.
 >       may get the "No xref found" error message instead. Don't worry.
 >       You can try other xrefs listed in |vlime-mappings-invoke-xref|,
 >       or skip this operation and proceed to the next section.
+
+Finished up the `vlime-tutor` and learned a ton.  Incredible tool set and language.  Lots to memorize regarding commands but the flexibility is amazing.  Here's hoping I stick to it.  I think I can do 30-60m a day.  Maybe new lunch-break hobby?
+
+Updated `ep.fish` function to be a lot smarter with date/time stamps.  Learned a fair amount about `date` and Fish shell syntax in the process.
