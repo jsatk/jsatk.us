@@ -23,6 +23,7 @@ draft: false
     * [2020-06-12](#2020-06-12)
 * [September 2020](#september-2020)
     * [09-06-2020](#09-06-2020)
+    * [09-06-2020](#09-06-2020)
 
 ## January 2020
 
@@ -90,4 +91,4 @@ git submodules are hell. Never use them.
 
 ### 09-06-2020
 
-I need to move my sbcl installation from brew to asdf.
+I need to move my sbcl installation from brew to asdf.  I need to install quicklist as part of my Makefile.
