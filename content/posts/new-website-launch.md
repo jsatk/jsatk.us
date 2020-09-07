@@ -22,7 +22,7 @@ Which brings us to this site.
 
 I've long wanted to set up my own website that I actually owned and had some control over.  My goals with this website were simple.
 
-- I can write in Vim.
+- I can write in [Vim](https://www.vim.org).
 - I can publish from the commandline.
 - I can write in Markdown or HTML at my discretion.
 - No javascript involved.
