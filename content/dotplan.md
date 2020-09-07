@@ -23,7 +23,7 @@ draft: false
     * [2020-06-12](#2020-06-12)
 * [September 2020](#september-2020)
     * [09-06-2020](#09-06-2020)
-    * [09-06-2020](#09-06-2020)
+    * [09-07-2020](#09-07-2020)
 
 ## January 2020
 
@@ -92,3 +92,12 @@ git submodules are hell. Never use them.
 ### 09-06-2020
 
 I need to move my sbcl installation from brew to asdf.  I need to install quicklist as part of my Makefile.
+
+## 09-07-2020
+
+Need to take care of this error in Vlime.
+
+> Note: Depending on how your Common Lisp implementation was built, you
+>       may get the "No xref found" error message instead. Don't worry.
+>       You can try other xrefs listed in |vlime-mappings-invoke-xref|,
+>       or skip this operation and proceed to the next section.
