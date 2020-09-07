@@ -95,7 +95,7 @@ Started going through the Vlime tutor again.  I want to get back to learning Com
 
 I need to move my sbcl installation from brew to asdf.  I need to install quicklist as part of my Makefile.
 
-## 09-07-2020
+### 09-07-2020
 
 Need to take care of this error in Vlime.
 
