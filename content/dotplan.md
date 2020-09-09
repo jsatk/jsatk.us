@@ -24,6 +24,8 @@ draft: false
 * [September 2020](#september-2020)
     * [09-06-2020](#09-06-2020)
     * [09-07-2020](#09-07-2020)
+* [September 2020](#september-2020)
+    * [09-09-2020](#09-09-2020)
 
 ## January 2020
 
@@ -107,3 +109,7 @@ Need to take care of this error in Vlime.
 Finished up the `vlime-tutor` and learned a ton.  Incredible tool set and language.  Lots to memorize regarding commands but the flexibility is amazing.  Here's hoping I stick to it.  I think I can do 30-60m a day.  Maybe new lunch-break hobby?
 
 Updated `ep.fish` function to be a lot smarter with date/time stamps.  Learned a fair amount about `date` and Fish shell syntax in the process.
+
+### 09-09-2020
+
+Made significant updates to my `ep.fish` script.  A lot cleaner now.
