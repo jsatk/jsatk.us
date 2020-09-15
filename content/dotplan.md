@@ -25,6 +25,7 @@ draft: false
     * [09-06-2020](#09-06-2020)
     * [09-07-2020](#09-07-2020)
     * [09-09-2020](#09-09-2020)
+    * [09-15-2020](#09-15-2020)
 
 ## January 2020
 
@@ -112,3 +113,26 @@ Updated `ep.fish` function to be a lot smarter with date/time stamps.  Learned a
 ### 09-09-2020
 
 Made significant updates to my `ep.fish` script.  A lot cleaner now.
+
+### 09-15-2020
+
+Reformatted my work computer.  That was hell.  JAMF and other remotely-manage systems just do not play with with macOS.  It so clearly does not want to be managed by anyone other than you/Apple.
+
+My dotfiles repo simultaneously showed how powerful and valuable it is and also where the holes are.  Some issues that came up during the install process that I'd like to automate if possible:
+
+* Installation order was an issue.  Look into this to see if we can do a few more if/else checks for what's installed.
+* Importing keyring would be nice to automate.
+* Is there a way to automate things like setting keyboard repeat speed? Autohide dock? Wallpaper?
+* Is there a way to check and set Fish shell to default shell?
+* Maybe it's time I add a sensible .zsh file now that it's macOS's default shell.  I really don't want to go down a rabbit hole with it, but just set the sensible defaults I'll want if I ever have to work in it.
+* Maybe add some sort of prompt to run `tmuxinator doctor` as well as `nvim +checkhealth`.
+* Automate installing certs that you want on every machine.
+* Perhaps automate installing Fastmail profile?  This might be too damn hard.
+* Auto-import fonts.
+* Set up iTerm and auto-import its settings.
+* Coc extensions.  Really annoying that you can't really manage these well.
+* Install tmux plugins.  Automate this.
+* Make mail directories automatically.  `~/.mail/` `~/.mail/jsatk/` & `~/.mail/temporary/`.
+* Set up irc cloud.  This is probably not automatable.
+* Make sure to run `notmuch new` on a new machine.
+* Install weechat plugins such as `go` and `autosort`.
