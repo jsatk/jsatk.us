@@ -155,3 +155,5 @@ Makefile:98: warning: ignoring old commands for target `/Users/jsatk/.asdf/shims
 ```
 
 Neovim wants me to have a plugin called "neovim" from both `npm` and `gem`.  The issue is that using `asdf` to manage both causes the `target` in the `Makefile` to end up being literally identical for both.  `asdf` is smart enough to handle this naming collision and appends extra info to the end (i.e. `neovim-node-host` & `neovim-ruby-host`), but `make` understandably panics when it sees two targets named the same thing.  This took a bit to figure out why I was getting these warnings until I realized all my variables and string concatenation I do at the top of the `Makefile` resulted in the same `target` for both.
+
+
