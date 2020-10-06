@@ -26,6 +26,8 @@ draft: false
     * [09-07-2020](#09-07-2020)
     * [09-09-2020](#09-09-2020)
     * [09-15-2020](#09-15-2020)
+* [October 2020](#october-2020)
+    * [10-05-2020](#10-05-2020)
 
 ## January 2020
 
@@ -136,3 +138,20 @@ My dotfiles repo simultaneously showed how powerful and valuable it is and also 
 * Set up irc cloud.  This is probably not automatable.
 * Make sure to run `notmuch new` on a new machine.
 * Install weechat plugins such as `go` and `autosort`.
+
+## Octorber 2020
+
+### 10-05-2020
+
+Finally sat down and attempted to unfuck YNAB today.  The system works if you diligently stick to it, but if you fall off at all it's a shitshow.  I fixed our budgets for the past three years starting at January 2018, which is when we last declared budget bankruptcy and started over.
+
+Where our money went for the past three years is mildly inaccurate on there now (i.e. transactions might be labeled incorrectly), but how much we actually have and our current month's budget is spot on.  Budgeting is an anxiety inducing hell for me but it needs to be done and glad I did it.
+
+I also spent time figuring out why I keep getting this warning when I run `make` in my dotfiles repo.
+
+```
+Makefile:107: warning: overriding commands for target `/Users/jsatk/.asdf/shims/neovim'
+Makefile:98: warning: ignoring old commands for target `/Users/jsatk/.asdf/shims/neovim'
+```
+
+Neovim wants me to have a plugin called "neovim" from both `npm` and `gem`.  The issue is that using `asdf` to manage both causes the `target` in the `Makefile` to end up being literally identical for both.  `asdf` is smart enough to handle this naming collision and appends extra info to the end (i.e. `neovim-node-host` & `neovim-ruby-host`), but `make` understandably panics when it sees two targets named the same thing.  This took a bit to figure out why I was getting these warnings until I realized all my variables and string concatenation I do at the top of the `Makefile` resulted in the same `target` for both.
