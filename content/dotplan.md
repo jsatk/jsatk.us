@@ -28,6 +28,7 @@ draft: false
     * [09-15-2020](#09-15-2020)
 * [October 2020](#october-2020)
     * [10-05-2020](#10-05-2020)
+    * [10-24-2020](#10-24-2020)
 
 ## January 2020
 
@@ -149,11 +150,19 @@ Where our money went for the past three years is mildly inaccurate on there now 
 
 I also spent time figuring out why I keep getting this warning when I run `make` in my dotfiles repo.
 
-```
+```make
 Makefile:107: warning: overriding commands for target `/Users/jsatk/.asdf/shims/neovim'
 Makefile:98: warning: ignoring old commands for target `/Users/jsatk/.asdf/shims/neovim'
 ```
 
 Neovim wants me to have a plugin called "neovim" from both `npm` and `gem`.  The issue is that using `asdf` to manage both causes the `target` in the `Makefile` to end up being literally identical for both.  `asdf` is smart enough to handle this naming collision and appends extra info to the end (i.e. `neovim-node-host` & `neovim-ruby-host`), but `make` understandably panics when it sees two targets named the same thing.  This took a bit to figure out why I was getting these warnings until I realized all my variables and string concatenation I do at the top of the `Makefile` resulted in the same `target` for both.
 
+### 10-24-2020
 
+More budgeting.  Almost a month of consistently doing it.  I hate money but
+forcing myself to grow up and get serious about it.
+
+Ported over some more dotfile changes from my work branch.  Maintaining a
+personal & work branch is getting quite annoying.  But it's one of those things
+that I'll be glad I kept my personal up-to-date whenever I get back to actually
+coding on this machine and/or writing on my blog again.
