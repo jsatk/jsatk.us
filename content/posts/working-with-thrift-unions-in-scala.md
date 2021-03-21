@@ -140,7 +140,7 @@ class Foo {
 
 ## Conclusion
 
-Scrooge has really great docs on [Unions](https://twitter.github.io/scrooge/GeneratedCodeUsage.html) here if you want a more thorough explanation.  However I found these to be a tad confusing and didn't spell out the real world examples I was encountering.
+Scrooge has really great docs on Unions [here](https://twitter.github.io/scrooge/GeneratedCodeUsage.html) if you want a more thorough explanation.  However I found these to be a tad confusing and didn't spell out the real world examples I was encountering.
 
 Please [email me](mailto:jesse@jsatk.us) any comments, thoughts, or corrections.
 
