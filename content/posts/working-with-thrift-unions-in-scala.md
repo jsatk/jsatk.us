@@ -62,9 +62,9 @@ import com.foo.datalogging.{ Record, DataRecord }
 import com.foo.datalogging.DataRecord.{ UnknownUnionField, V1, V2 }
 
 class Foo {
-  def apply(record: DataRecord): Option[Record] =
+  def apply(dataRecord: DataRecord): Option[Record] =
     // First we need to `map` because `record` is an [[Option]].
-    record.prophecyAO.flatMap(p =>
+    dataRecord.record.flatMap(p =>
       // Here we cannot do `p.v1.request`.   Again, we need to figure out what type we're dealing with.
       p match {
         case V1(v1) => Some(v1) // 👈 Inside this case we now know that `v1` is a subtype [[Record]] and can treat it as such.
@@ -84,8 +84,8 @@ import com.foo.datalogging.{ Record, RecommenderRecord }
 import com.foo.datalogging.DataRecord.{ UnknownUnionField, V1, V2 }
 
 class Foo {
-  def apply(record: RecommenderRecord): Option[Record] =
-    record.prophecyAO.flatMap(
+  def apply(dataRecord: DataRecord): Option[Record] =
+    dataRecord.record.flatMap(p =>
       case V1(v1) => Some(v1)
       case V2(v2) => Some(v2)
       case UnknownUnionField(_) => None
@@ -107,7 +107,7 @@ import com.foo.datalogging.{ Record, DataRecord }
 import com.foo.datalogging.DataRecord.V2
 
 class Foo {
-  def apply(request: RequestB, response: ResponseB): RecommenderRecord =
+  def apply(request: RequestB, response: ResponseB): DataRecord =
     DataRecord(
       Some( // Because we're dealing with an [[Option]].
         V2( // The name of the property on [[Record]] we're setting.
@@ -133,8 +133,8 @@ import com.foo.datalogging.Record.{ UnknownUnionField, V1 }
 import com.softwaremill.quicklens._
 
 class Foo {
-  def apply(record: DataRecord): Option[Record] =
-    record.modify(_.prophecyAO.each.when[V1].v1.response.each).setTo(???)
+  def apply(dataRecord: DataRecord): Option[DataRecord] =
+    dataRecord.modify(_.record.each.when[V1].v1.response.each).setTo(???)
 }
 ```
 
