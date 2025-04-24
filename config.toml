@@ -4,7 +4,11 @@ theme = "hugo-coder"
 languageCode = "en-us"
 defaultcontentlanguage = "en"
 
-paginate = 20
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'
+
 canonifyurls = true
 
 pygmentsstyle = "bw"
